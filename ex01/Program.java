@@ -6,7 +6,7 @@ public class Program {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        if(n >= 0 && n <= 1) {
+        if(n <= 1) {
             System.err.println("IllegalArgument");
             scanner.close();
             System.exit(-1); //error
