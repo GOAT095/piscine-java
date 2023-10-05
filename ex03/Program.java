@@ -1,8 +1,5 @@
 package ex03;
 
-import java.rmi.ServerError;
-import java.security.cert.CertificateRevokedException;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Program {
