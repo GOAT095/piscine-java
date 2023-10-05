@@ -33,6 +33,7 @@ public class Program {
                 }
                 int min = get_min(scanner);
                 System.out.println(min);
+
             }
         }
     }
