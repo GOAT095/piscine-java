@@ -1,5 +1,8 @@
 package ex03;
 
+import java.rmi.ServerError;
+import java.security.cert.CertificateRevokedException;
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Program {
@@ -7,7 +10,7 @@ public class Program {
         int min = 9;
         for(int i = 0; i < 5;i++){
             int x = s.nextInt();
-            min = min < x ? x : min;
+            min = x < min ? x : min;
         }
         return min;
     }
@@ -23,8 +26,13 @@ public class Program {
                 break;
             if(s.equals("Week")){
                 int Wentered = scanner.nextInt();
+                if(Wentered != CurrentWeek){
+                    System.err.println("IllegalArgument");
+                    scanner.close();
+                    System.exit(-1);
+                }
                 int min = get_min(scanner);
-
+                System.out.println(min);
             }
         }
     }
